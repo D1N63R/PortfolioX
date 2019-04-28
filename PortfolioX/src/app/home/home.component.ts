@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Portfolio } from '../portfolio';
+import { FireDBService } from '../fire-db.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  portfolios: Portfolio[] = [];
+
+  constructor(private portService: FireDBService) { }
 
   ngOnInit() {
+    this.portService.getPortfolios().subscribe(data => {this.portfolios = data
+    console.log(data);
+  });
   }
 
 }

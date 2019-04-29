@@ -10,9 +10,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ARtickerComponent } from './articker/articker.component';
+import { HomeComponent } from './home/home.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 import { AddPortComponent } from './add-port/add-port.component';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
 
@@ -31,13 +33,12 @@ import { AddPortComponent } from './add-port/add-port.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule],
-
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireStorageModule
   ],
-  providers: [MainService],
+  providers: [MainService, { provide: LocationStrategy, useClass: HashLocationStrategy }], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

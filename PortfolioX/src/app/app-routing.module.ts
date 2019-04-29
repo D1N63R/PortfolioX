@@ -9,10 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { ARtickerComponent } from './articker/articker.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'research', component: ResearchComponent},
 
-  { path: '',   redirectTo: '/Research', pathMatch: 'full' },
 ];
  
 @NgModule({

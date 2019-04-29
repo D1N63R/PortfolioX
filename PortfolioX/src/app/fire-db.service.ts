@@ -15,7 +15,7 @@ export class FireDBService {
       
   constructor(public afs: AngularFirestore){
       this.portfolios = afs.collection('employees').valueChanges();
-      this.portfolioCollection = this.afs.collection('portfolios');
+      this.portfolioCollection = this.afs.collection('employees');
   }
 
   getPortfolios():Observable<Portfolio[]>{

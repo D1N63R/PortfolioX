@@ -1,6 +1,6 @@
 
 export interface Portfolio{
-    id?: string;
-    name?: string;
-    age?: string;
+    portfolioN?: string;
+    tickers?: [];
+    id?:string;
 }

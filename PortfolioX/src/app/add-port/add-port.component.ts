@@ -11,9 +11,8 @@ import { fromEventPattern } from 'rxjs';
 export class AddPortComponent implements OnInit {
 
   port: Portfolio = {
-    id: '',
-    name: '',
-    age: ''
+    portfolioN: '',
+    tickers: []
   }
 
   constructor(private portService: FireDBService) { }
@@ -22,10 +21,10 @@ export class AddPortComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.port.id != '' && this.port.name != '' && this.port.age != '')
+    if(this.port.portfolioN != '' && this.port.tickers != [])
       this.portService.addPortfolio(this.port);
-    this.port.id = '';
-    this.port.name = '';
-    this.port.age = '';
+    
+    this.port.portfolioN = '';
+    this.port.tickers = [];
   }
 }

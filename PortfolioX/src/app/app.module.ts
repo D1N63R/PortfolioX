@@ -18,6 +18,7 @@ import { AddPortComponent } from './add-port/add-port.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { AddPortComponent } from './add-port/add-port.component';
     NavBarComponent,
     HomeComponent,
     ARtickerComponent,
-    AddPortComponent
+    AddPortComponent,
+ 
   ],
   imports: [
     BrowserModule,

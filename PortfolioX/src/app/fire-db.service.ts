@@ -15,7 +15,13 @@ export class FireDBService {
       
   constructor(public afs: AngularFirestore){
       
-      this.portfolioCollection = this.afs.collection('Rosey', ref => ref.orderBy('PortfolioN','asc'));
+      
+
+  }
+
+  getPortfolios():Observable<Portfolio[]>{
+
+    this.portfolioCollection = this.afs.collection('Rosey', ref => ref.orderBy('PortfolioN','asc'));
 
 
       this.portfolios = this.afs.collection('Rosey').snapshotChanges().pipe(map(changes => {
@@ -25,10 +31,6 @@ export class FireDBService {
           return data;
         });
       }));
-
-  }
-
-  getPortfolios():Observable<Portfolio[]>{
           
       console.log(this.portfolios);
       return this.portfolios;

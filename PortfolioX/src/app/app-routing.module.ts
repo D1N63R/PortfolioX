@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ResearchComponent } from './research/research.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { ARtickerComponent } from './articker/articker.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },

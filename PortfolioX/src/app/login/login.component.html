@@ -5,15 +5,14 @@
 <form (ngSubmit) = onSubmit() align = 'center'>
   <div class="row">
     <div class="input-field col s6">
-        <label for="LoginTitle"> Username: &nbsp; </label>
-        <input type="text" placeholder=" Username " [(ngModel)] = 'user.Username' name='name'>
+        <label for="LoginTitle"> Username: </label>
+        <input #userName type="text" placeholder="Username" [(ngModel)] = 'user.username' name='name'>
     </div>
     <div class="input-field col s6">
-        <label for="age">Password: &nbsp; </label>
-        <input type="password" placeholder=" Password" [(ngModel)] = 'user.password' name='password'>
+        <label for="age">Password: </label>
+        <input #passWord type="password" placeholder="Password" [(ngModel)] = 'user.password' name='password'>
     </div>
-    <input type="submit" value="Submit" class="btn">
-    <br>
+    <input (click)="onSubmit(userName.value, passWord.value)" type="submit" value="Submit">
   </div>
   <p> <br></p>
 </form>

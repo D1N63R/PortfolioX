@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { AddPortComponent } from './add-port/add-port.component';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 
 
@@ -28,6 +29,7 @@ import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.co
     HomeComponent,
     AddPortComponent,
     PortfolioDetailComponent,
+    JumbotronComponent,
  
   ],
   imports: [

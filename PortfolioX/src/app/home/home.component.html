@@ -1,5 +1,20 @@
 <h2>Portfolio Details / home Component</h2>
 <h3>{{errorMsg}}</h3>
-<ul *ngFor="let portfolio of portfolios">
-  <li>{{portfolio.id}}. {{portfolio.name}} - {{portfolio.age}}</li>
-</ul>
+
+<div>
+
+    <table align= "center"> 
+        <tr *ngFor="let portfolio of portfolios">
+            <td>
+              <h2 (dblclick)= "deletePortfolio($event,portfolio)">{{portfolio.portfolioN}} - {{portfolio.tickers}}</h2> 
+            <a href = "#" class = "secondary content" > <i (click) = "editTickers($event,portfolio)" class = "fa fa-pencil" ></i></a></td>
+        </tr>
+    </table>
+</div>
+  
+  
+
+    
+  
+  
+ 

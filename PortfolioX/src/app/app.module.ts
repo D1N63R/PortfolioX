@@ -19,6 +19,7 @@ import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LocationStrategy, HashLocationStrategy} from '@angular/common';
     ARtickerComponent,
     HomeComponent,
     ARtickerComponent,
-    AddPortComponent
+    AddPortComponent,
+ 
   ],
   imports: [
     BrowserModule,

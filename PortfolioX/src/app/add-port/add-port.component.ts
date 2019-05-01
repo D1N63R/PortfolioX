@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Portfolio } from '../portfolio';
 import { FireDBService } from '../fire-db.service';
+import { fromEventPattern } from 'rxjs';
 
 @Component({
   selector: 'app-add-port',
@@ -10,9 +11,8 @@ import { FireDBService } from '../fire-db.service';
 export class AddPortComponent implements OnInit {
 
   port: Portfolio = {
-    id: 0,
-    name: '',
-    age: 0
+    portfolioN: '',
+    tickers: []
   }
 
   constructor(private portService: FireDBService) { }
@@ -20,11 +20,11 @@ export class AddPortComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSumbit(){
-    if(this.port.id != 0 && this.port.name != '' && this.port.age != 0)
+  onSubmit(){
+    if(this.port.portfolioN != '' && this.port.tickers != [])
       this.portService.addPortfolio(this.port);
-    this.port.id = 0;
-    this.port.name = '';
-    this.port.age = 0;
+    
+    this.port.portfolioN = '';
+    this.port.tickers = [];
   }
 }

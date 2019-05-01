@@ -4,16 +4,12 @@
     <form (ngSubmit) = onSubmit() class="col s6">
       <div class="row">
         <div class="input-field col s6">
-          <label for="id">ID</label>
-          <input type="text" placeholder="Add Title" [(ngModel)] = 'emp.id' name='id'>
+            <label for="name">PortfolioName</label>
+            <input type="text" placeholder="Add Name " [(ngModel)] = 'port.portfolioN' name='name'>
         </div>
         <div class="input-field col s6">
-            <label for="name">Name</label>
-            <input type="text" placeholder="Add Name" [(ngModel)] = 'emp.name' name='name'>
-        </div>
-        <div class="input-field col s6">
-            <label for="age">Age</label>
-            <input type="text" placeholder="Add Age" [(ngModel)] = 'emp.age' name='age'>
+            <label for="age">Ticker</label>
+            <input type="text" placeholder="Add tickers" [(ngModel)] = 'port.tickers' name='tickers'>
         </div>
         <input type="submit" value="Submit" class="btn btn-primary">
       </div>

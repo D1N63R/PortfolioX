@@ -14,8 +14,10 @@ export class HomeComponent implements OnInit {
   constructor(private portService: FireDBService) { }
 
   ngOnInit() {
-    this.portService.getPortfolios().subscribe(data => {this.portfolios = data
+    this.portService.getPortfolios().subscribe(data => {
+      this.portfolios = data
     console.log(data);
+    
   });
   }
 

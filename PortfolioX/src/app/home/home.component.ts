@@ -22,10 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  deletePortfolio(event, portfolio: Portfolio)
-  {
-    this.portService.deletePortfolio(portfolio);
-  }
+  
 
 
 }

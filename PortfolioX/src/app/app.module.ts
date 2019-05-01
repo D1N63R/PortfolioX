@@ -14,6 +14,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 import { AddPortComponent } from './add-port/add-port.component';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 
 
 
@@ -26,6 +27,7 @@ import { LocationStrategy, HashLocationStrategy} from '@angular/common';
     LoginComponent,
     HomeComponent,
     AddPortComponent,
+    PortfolioDetailComponent,
  
   ],
   imports: [

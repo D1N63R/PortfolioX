@@ -14,10 +14,15 @@ export class AddPortComponent implements OnInit {
     portfolioN: '',
     tickers: []
   }
+  portfolios: Portfolio[] = [];
 
   constructor(private portService: FireDBService) { }
 
-  ngOnInit() {
+  ngOnInit() { this.portService.getPortfolios().subscribe(data => {
+    this.portfolios = data
+  console.log(data);
+  
+});
   }
 
   onSubmit(){
@@ -26,5 +31,11 @@ export class AddPortComponent implements OnInit {
     
     this.port.portfolioN = '';
     this.port.tickers = [];
+  }
+
+  deletePortfolio(event, portfolio: Portfolio)
+  {
+    this.portService.deletePortfolio(portfolio);
+    console.log("it works")
   }
 }

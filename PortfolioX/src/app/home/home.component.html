@@ -7,7 +7,7 @@
         <tr *ngFor="let portfolio of portfolios">
             <td>
               <h2 (dblclick)= "deletePortfolio($event,portfolio)">{{portfolio.portfolioN}} - {{portfolio.tickers}}</h2> 
-            <a href = "#" class = "secondary content" > <i (click) = "editTickers($event,portfolio)" class = "fa fa-pencil" ></i></a></td>
+            </td>
         </tr>
     </table>
 </div>

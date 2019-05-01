@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +10,17 @@ import { User } from './user';
 export class LoginComponent implements OnInit {
 
   user: User = {
-    username: '',
-    password: ''
+    username: 'user',
+    password: 'pass'
   }
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  onSubmit(){
-    if(this.user.password != '' && this.user.username != '')
-    this.user.username = '';
-    this.user.password = '';
-    console.log("it works?")
+  onSubmit(userinput, password){
+    if(userinput = this.user.username) {
+      this.router.navigateByUrl('/home');
+    }
   }
 }

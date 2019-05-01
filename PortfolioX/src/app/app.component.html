@@ -1,7 +1,12 @@
+<div class="container" style="text-align: center">
+    <h1 class="jumbotron" id="headerOne" style="background-color: dimgrey;">
+      Welcome to <span style="color : red;">PortfolioX</span>
+    </h1>
 
-
-<div><h1><strong>Research Component</strong></h1></div>
-<app-research></app-research>
-<app-home></app-home>
-<app-add-port></app-add-port>
-<app-login></app-login>
+    
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/home" routerLinkActive="">Home</a>
+    <a class="navbar-brand" routerLink="/research" routerLinkActive="">Research</a>
+</nav>
+<router-outlet></router-outlet>

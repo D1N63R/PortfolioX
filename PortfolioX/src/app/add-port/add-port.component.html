@@ -1,6 +1,6 @@
 
 <div>
-<ul class="Portfolio">
+<ul class="PList" >
   <li *ngFor="let port of portfolios">
   <a routerLink="/detail/{{port.id}}">
   <span class="badge">{{port.portfolioN}}</span> {{port.tickers}}
@@ -11,7 +11,11 @@
   </ul>
 </div>
 
+
+
 <div class="card">
+  <br>
+  <br>
   <div class="content">
     <span class="title"> <strong>Add Portfolio</strong></span>
     <form (ngSubmit) = onSubmit() class="col s6">

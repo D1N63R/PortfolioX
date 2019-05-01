@@ -11,3 +11,14 @@ h5{
     font : 2rem 'Fira Sans', sans-serif;
     text-align: center;
 }
+
+.btn{
+    background-color: red;
+}
+
+input{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+

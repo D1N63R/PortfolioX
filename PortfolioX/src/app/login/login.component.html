@@ -1,17 +1,21 @@
 
 
-
 <h5><strong> Login Here</strong></h5>
+
 <form (ngSubmit) = onSubmit() align = 'center'>
   <div class="row">
     <div class="input-field col s6">
-        <label for="LoginTitle"> Username: </label>
-        <input type="text" placeholder="Username " [(ngModel)] = 'user.Username' name='name'>
+        <label for="LoginTitle"> Username: &nbsp; </label>
+        <input type="text" placeholder=" Username " [(ngModel)] = 'user.Username' name='name'>
     </div>
     <div class="input-field col s6">
-        <label for="age">Password: </label>
-        <input type="password" placeholder="Password" [(ngModel)] = 'user.password' name='password'>
+        <label for="age">Password: &nbsp; </label>
+        <input type="password" placeholder=" Password" [(ngModel)] = 'user.password' name='password'>
     </div>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" class="btn">
+    <br>
   </div>
+  <p> <br></p>
 </form>
+
+

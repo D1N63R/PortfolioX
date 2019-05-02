@@ -12,7 +12,10 @@ a{
     color: red;
 }
 
+nav{
+    padding-left: 17%;
 
+}
 /* Ticker Scroller*/
 
 .example1 {

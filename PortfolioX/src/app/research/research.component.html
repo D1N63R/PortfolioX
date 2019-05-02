@@ -5,7 +5,7 @@
   <form (submit)="getCurrentPrice()" #formData='ngForm'>
     <div class="form-group">
       <label class="col-form-label" for="inputDefault">Enter Stock Ticker Symbol (use "," as a delimeter to enter multiple symbols) : </label>
-      <input type="text" placeholder="Minimum 3 characters" class="form-control"
+      <input type="text" placeholder="Minimum 3 characters"
              name="symbol" required minlength="3" [(ngModel)]="stock.symbol" pattern="^(.{3,})$" #titleModel="ngModel">
     </div>
     <button class="btn btn-outline-primary" [disabled]="!formData.valid">Get Information</button>

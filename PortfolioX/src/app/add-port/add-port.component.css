@@ -19,3 +19,17 @@
        border-radius: 4px;
    }
    
+   
+.PList{
+    margin-left: auto;
+    margin-right: auto;
+    color:red;
+    font : 1.5rem 'Fira Sans', sans-serif;
+    width: 50%;           
+    border-collapse: separate;
+    border: 1px solid black;
+    border-style: rounded;
+    background-color:lightgray;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+}

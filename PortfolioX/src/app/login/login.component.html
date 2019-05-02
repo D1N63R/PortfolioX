@@ -12,9 +12,10 @@
         <label for="age">Password: </label>
         <input #passWord type="password" placeholder="Password" [(ngModel)] = 'user.password' name='password'>
     </div>
-    <input (click)="onSubmit(userName.value, passWord.value)" type="submit" value="Submit" class='btn'>
+    <input (click)="onSubmit(user.username, user.password)" type="submit" value="Submit" class='btn'>
   </div>
   <p> <br></p>
+  
 </form>
 
 

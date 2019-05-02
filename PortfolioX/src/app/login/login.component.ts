@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
-import { Router } from '@angular/router';
+import { Router, UrlSerializer } from '@angular/router';
+import { data} from './data'
 
 @Component({
   selector: 'app-login',
@@ -10,17 +11,30 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   user: User = {
-    username: 'user',
-    password: 'pass'
+    name: 'user',
+    pword: 'pass'
   }
-  constructor(private router: Router) { }
+  constructor(private router: Router) { }da
 
   ngOnInit() {
   }
 
-  onSubmit(userinput, password){
-    if(userinput = this.user.username) {
+  onSubmit(username,password) {
+    
+    for(let user of data)
+    {
+    if(username == user.name && password == user.pword) {
       this.router.navigateByUrl('/home');
+      
     }
+
+    localStorage.setItem('MyApp_User', JSON.stringify(username));
+
+    
   }
+  }
+
+
+
+ 
 }

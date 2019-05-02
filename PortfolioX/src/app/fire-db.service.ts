@@ -12,19 +12,28 @@ export class FireDBService {
   portfolioCollection : AngularFirestoreCollection;
 
   portfolioDoc: AngularFirestoreDocument<Portfolio>;
+
+  
       
   constructor(public afs: AngularFirestore){
       
-      
+    //let auth:
+    //if(localStorage.getItem('MyApp_User')){
+
+    
+    //auth = localStorage.getItem('MyApp_User');
+    
 
   }
 
   getPortfolios():Observable<Portfolio[]>{
 
-    this.portfolioCollection = this.afs.collection('Rosey', ref => ref.orderBy('PortfolioN','asc'));
+    
+
+    this.portfolioCollection = this.afs.collection(localStorage.getItem('MyApp_User'), ref => ref.orderBy('PortfolioN','asc'));
 
 
-      this.portfolios = this.afs.collection('Rosey').snapshotChanges().pipe(map(changes => {
+      this.portfolios = this.afs.collection(localStorage.getItem('MyApp_User')).snapshotChanges().pipe(map(changes => {
         return changes.map(a=>{
           const data = a.payload.doc.data() as Portfolio
           data.id = a.payload.doc.id;
@@ -42,7 +51,7 @@ export class FireDBService {
   }
 
   deletePortfolio(port: Portfolio){
-    this.portfolioDoc = this.afs.doc(`Rosey/${port.id}`)
+    this.portfolioDoc = this.afs.doc(localStorage.getItem('MyApp_User') +"/" +(port.id))
     this.portfolioDoc.delete();
   }
 

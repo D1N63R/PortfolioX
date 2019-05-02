@@ -3,6 +3,7 @@ import { Portfolio } from '../portfolio';
 import { FireDBService } from '../fire-db.service';
 import { fromEventPattern } from 'rxjs';
 
+
 @Component({
   selector: 'app-add-port',
   templateUrl: './add-port.component.html',
@@ -21,6 +22,8 @@ export class AddPortComponent implements OnInit {
   ngOnInit() { this.portService.getPortfolios().subscribe(data => {
     this.portfolios = data
   console.log(data);
+
+  
   
 });
   }
@@ -36,6 +39,6 @@ export class AddPortComponent implements OnInit {
   deletePortfolio(event, portfolio: Portfolio)
   {
     this.portService.deletePortfolio(portfolio);
-    console.log("it works")
+    
   }
 }

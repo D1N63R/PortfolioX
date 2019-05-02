@@ -7,9 +7,14 @@
     
 }
 
+nav{
+    padding-left: 185px;
+}
+
 a{
     font: 2rem 'Fira Sans', sans-serif;
     color: red;
+    
 }
 
 nav{

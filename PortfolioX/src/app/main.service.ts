@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { delay } from 'rxjs/operators';
 
 @Injectable()
 export class MainService {
@@ -9,10 +10,15 @@ export class MainService {
 
   constructor(private _http: Http) { }
 
+  public sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+
   getCurrentPrice(stock, cb) {
     this.stocks = stock.symbol.split(',');
     var idx = -1;
     for (var i = 0; i < this.stocks.length; i++) {
+      this.sleep(10000);
       var stockSymbol = this.stocks[i].trim();
       this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + stockSymbol + '&interval=1min&apikey=GT13K1EANRVG5KOS').subscribe((res) => {
         idx++;

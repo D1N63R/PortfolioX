@@ -5,11 +5,11 @@ import { RouterModule, Routes }  from '@angular/router';
 import { AppComponent } from './app.component';
 import { ResearchComponent } from './research/research.component';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { AddPortComponent } from './add-port/add-port.component';
 
 const appRoutes: Routes = [
   { path: '', 
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: AddPortComponent
   },
   { path: 'research', 
     component: ResearchComponent
@@ -38,4 +38,4 @@ const appRoutes: Routes = [
   ]
 })
 export class AppRoutingModule {}
-export const routingComponents = [HomeComponent, ResearchComponent];
+export const routingComponents = [ResearchComponent];

@@ -9,7 +9,7 @@ import { AddPortComponent } from './add-port/add-port.component';
 
 const appRoutes: Routes = [
   { path: '', 
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {

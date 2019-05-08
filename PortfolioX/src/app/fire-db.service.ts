@@ -16,14 +16,6 @@ export class FireDBService {
   
       
   constructor(public afs: AngularFirestore){
-      
-    //let auth:
-    //if(localStorage.getItem('MyApp_User')){
-
-    
-    //auth = localStorage.getItem('MyApp_User');
-    
-
   }
 
   getPortfolios():Observable<Portfolio[]>{

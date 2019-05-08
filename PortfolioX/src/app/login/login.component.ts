@@ -30,11 +30,6 @@ export class LoginComponent implements OnInit {
 
     localStorage.setItem('MyApp_User', JSON.stringify(username));
 
-    
   }
   }
-
-
-
- 
 }

@@ -23,8 +23,6 @@ export class AddPortComponent implements OnInit {
     this.portfolios = data
   console.log(data);
 
-  
-  
 });
   }
 

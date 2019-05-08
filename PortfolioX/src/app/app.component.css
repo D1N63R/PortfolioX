@@ -3,8 +3,6 @@
     margin-bottom: 0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    
-    
 }
 
 nav{
@@ -14,7 +12,6 @@ nav{
 a{
     font: 2rem 'Fira Sans', sans-serif;
     color: red;
-    
 }
 
 nav{
@@ -74,7 +71,3 @@ nav{
     transform: translateX(-100%); 
     }
    }
- .test{
-     position: relative;
-     transform: translate3d(40px,0px,0px)
- }
